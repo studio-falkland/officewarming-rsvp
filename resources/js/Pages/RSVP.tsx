@@ -24,8 +24,8 @@ export default function RSVP({ response }: RSVPProps) {
     }, []);
 
     return (
-        <div className="columns-2 gap-0 h-screen dark">
-            <div className="h-full bg-background p-16 flex-col flex gap-4 text-white leading-relaxed">
+        <div className="md:columns-2 gap-0 h-screen dark">
+            <div className="md:h-full bg-background p-16 flex-col flex gap-4 text-white leading-relaxed">
                 <h2 className="text-2xl font-bold text-white">Studiowarming</h2>
                 <p>We've been working on a place where we can collaborate, work and most importantly have some fun. We'd love to show you what we've made.</p>
                 <p>We're warmly welcoming you to joing our studiowarming on <b>February 14th</b> from <b>19:00</b> onwards. We'll provide beer, snacks and entertainment.</p>
