@@ -28,7 +28,7 @@ export default function RSVP({ response }: RSVPProps) {
             <div className="md:h-full overflow-y-auto bg-background p-16 flex-col flex gap-4 text-white leading-relaxed">
                 <h2 className="text-2xl font-bold text-white">Studiowarming</h2>
                 <p>We've been working on a place where we can collaborate, work and most importantly have some fun. We'd love to show you what we've made.</p>
-                <p>We're warmly welcoming you to joing our studiowarming on <b>February 14th</b> from <b>19:00</b> onwards. We'll provide beer, snacks and entertainment.</p>
+                <p>We're warmly welcoming you to joining our studiowarming on <b>February 14th</b> from <b>19:00</b> onwards. We'll provide beer, snacks and entertainment.</p>
                 <p>Find us at <b>Torenallee 32-06</b>, in the Apparatenfabriek, 5th floor. </p>
                 <p>Please RSVP on the right so we can take your attendance into account.</p>
                 <p>See you soon!</p>
