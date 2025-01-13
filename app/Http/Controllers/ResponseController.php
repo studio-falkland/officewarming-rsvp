@@ -16,8 +16,8 @@ class ResponseController extends Controller
 
         $response = Response::create($data);
 
-        $request->session()->put('submitted', true);
+        $request->session()->put('response_id', $response->id);
 
-        return $response;
+        return "OK";
     }
 }

@@ -1,20 +1,29 @@
-import { router } from '@inertiajs/react';
 import { AxiosError } from 'axios';
 import { shake } from 'radash';
-import { useCallback, useMemo } from 'react';
-import { useForm, useWatch } from 'react-hook-form';
+import { useCallback } from 'react';
+import { useForm } from 'react-hook-form';
 
-interface Data {
+export interface RSVPProps {
+    response: Response | false;
+}
+
+interface Response {
     name: string;
     persons?: number;
     email?: string;
 }
 
-export default function RSVP() {
-    const { register, handleSubmit, watch, setError, formState: { errors } } = useForm<Data>();
+export default function RSVP({ response }: RSVPProps) {
+    const {
+        register,
+        handleSubmit,
+        watch,
+        setError,
+        formState: { errors }
+    } = useForm<Response>({ values: response || undefined});
     const persons = watch('persons', 0);
 
-    const onSubmit = useCallback(async (data: Data) => {
+    const onSubmit = useCallback(async (data: Response) => {
         const values = shake(data, (v) => !v);
         try {
             const result = await window.axios.post('/rsvp', values);
@@ -29,8 +38,6 @@ export default function RSVP() {
             }
         }
     }, []);
-
-    console.log(errors);
 
     return (
         <div className="max-w-[400px] p-8 mx-auto">
