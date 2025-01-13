@@ -106,7 +106,7 @@ export default function RSVP({ response }: RSVPProps) {
                             ) : (
                                 <Card>
                                     <CardHeader>
-                                        <CardTitle>RSVP</CardTitle>
+                                        <CardTitle>Répondez, s'il vous plaît</CardTitle>
                                     </CardHeader>
                                     <CardContent>
                                         <RSVPForm />
