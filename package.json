@@ -25,6 +25,7 @@
         "vite": "^6.0"
     },
     "dependencies": {
+        "radash": "^12.1.0",
         "react-hook-form": "^7.54.2"
     }
 }
