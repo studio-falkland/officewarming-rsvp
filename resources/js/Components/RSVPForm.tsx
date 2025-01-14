@@ -6,6 +6,7 @@ import { Response } from '@/lib/types';
 import { MouseEventHandler, useCallback, useMemo } from 'react';
 import { shake } from 'radash';
 import { AxiosError } from 'axios';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from './ui/collapsible';
 
 export default function RSVPForm() {
     const { setError, handleSubmit, setValue } = useFormContext<Response>();
@@ -109,6 +110,7 @@ export default function RSVPForm() {
                 {' '}
                 be there!
             </Button>
+            <p className="text-sm text-muted-foreground">Studio Falkland will use this information for informing you about the studiowarming. All data will be deleted after this use.</p>
         </form>
     );
 }
