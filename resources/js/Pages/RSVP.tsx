@@ -71,6 +71,10 @@ export default function RSVP({ response }: RSVPProps) {
                         <AccordionContent>Plants! 🪴 We'd love some plants to decorate the office! If you're able to, we encourage you to pool together for bigger plants.</AccordionContent>
                     </AccordionItem>
                 </Accordion>
+                <div className="text-muted-foreground flex gap-6 justify-between">
+                    <p>Website hosted in EU 🇪🇺</p>
+                    <p><a className="underline" href="https://github.com/studio-falkland/officewarming-rsvp" target="_blank">Open Source</a></p>
+                </div>
             </div>
             <div className="h-full p-8 flex items-center justify-center relative">
                 <img src="/office-bg.jpg" className="absolute inset-0 -z-0 object-cover w-full h-full bg-blue-50 pointer-events-none" />
