@@ -6,7 +6,6 @@ import { Response } from '@/lib/types';
 import { MouseEventHandler, useCallback, useMemo } from 'react';
 import { shake } from 'radash';
 import { AxiosError } from 'axios';
-import { Collapsible, CollapsibleTrigger, CollapsibleContent } from './ui/collapsible';
 
 export default function RSVPForm() {
     const { setError, handleSubmit, setValue } = useFormContext<Response>();
@@ -76,11 +75,11 @@ export default function RSVPForm() {
                     <FormItem>
                         <FormLabel>№ of persons</FormLabel>
                         <div className="flex gap-2">
-                            <Button onClick={minusPerson}>-</Button>
+                            <Button type="button" onClick={minusPerson}>-</Button>
                             <FormControl>
                                 <Input type="number" {...field} placeholder="1" />
                             </FormControl>
-                            <Button onClick={plusPerson}>+</Button>
+                            <Button type="button" onClick={plusPerson}>+</Button>
                         </div>
                         <FormDescription>
                             The size of your party. Don't forget to count yourself!
