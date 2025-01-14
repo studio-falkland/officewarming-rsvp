@@ -3,13 +3,16 @@ import { Button } from './ui/button';
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from './ui/form';
 import { Input } from './ui/input';
 import { Response } from '@/lib/types';
-import { useCallback } from 'react';
+import { MouseEventHandler, useCallback, useMemo } from 'react';
 import { shake } from 'radash';
 import { AxiosError } from 'axios';
 
 export default function RSVPForm() {
-    const { setError, handleSubmit } = useFormContext<Response>();
+    const { setError, handleSubmit, setValue } = useFormContext<Response>();
     const persons = useWatch<Response>({ name: 'persons' });
+    const parsedPersons = useMemo(() => (
+        Number.parseInt(Number.isInteger(persons) ? persons as string : '1')
+    ), [persons]);
 
     const onSubmit = useCallback(async (data: Response) => {
         // Remove any empty values from the response object
@@ -36,6 +39,16 @@ export default function RSVPForm() {
         }
     }, []);
 
+    const plusPerson: MouseEventHandler = useCallback((e) => {
+        e.preventDefault();
+        setValue('persons', parsedPersons + 1);
+    }, [parsedPersons]);
+
+    const minusPerson: MouseEventHandler = useCallback((e) => {
+        e.preventDefault();
+        setValue('persons', Math.max(parsedPersons - 1, 1));
+    }, [parsedPersons]);
+
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
@@ -61,9 +74,13 @@ export default function RSVPForm() {
                 render={({ field }) => (
                     <FormItem>
                         <FormLabel>№ of persons</FormLabel>
-                        <FormControl>
-                            <Input type="number" {...field} placeholder="1" />
-                        </FormControl>
+                        <div className="flex gap-2">
+                            <Button onClick={minusPerson}>-</Button>
+                            <FormControl>
+                                <Input type="number" {...field} placeholder="1" />
+                            </FormControl>
+                            <Button onClick={plusPerson}>+</Button>
+                        </div>
                         <FormDescription>
                             The size of your party. Don't forget to count yourself!
                         </FormDescription>
@@ -76,6 +93,7 @@ export default function RSVPForm() {
                 render={({ field }) => (
                     <FormItem>
                         <FormLabel>Email</FormLabel>
+
                         <FormControl>
                             <Input type="text" {...field} />
                         </FormControl>
@@ -86,8 +104,8 @@ export default function RSVPForm() {
                     </FormItem>
                 )}
             />
-            <Button type="submit">
-                {Number.parseInt((persons || 0) as string) > 1 ? 'We\'ll' : 'I\'ll'}
+            <Button type="submit" className="mt-4">
+                {parsedPersons > 1 ? 'We\'ll' : 'I\'ll'}
                 {' '}
                 be there!
             </Button>

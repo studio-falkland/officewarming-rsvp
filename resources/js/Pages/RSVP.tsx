@@ -28,10 +28,10 @@ export default function RSVP({ response }: RSVPProps) {
             <div className="md:h-full overflow-y-auto bg-background p-16 flex-col flex gap-4 text-white leading-relaxed">
                 <h2 className="text-2xl font-bold text-white">Studiowarming</h2>
                 <p>We've been working on a place where we can collaborate, work and most importantly have some fun. We'd love to show you what we've made.</p>
-                <p>We're warmly welcoming you to joining our studiowarming on <b>February 14th</b> from <b>19:00</b> onwards. We'll provide beer, snacks and entertainment.</p>
-                <p>Find us at <b>Torenallee 32-06</b>, in the Apparatenfabriek, 5th floor. </p>
-                <p>Please RSVP on the right so we can take your attendance into account.</p>
-                <p>See you soon!</p>
+                <p>We're warmly welcoming you to join our studiowarming on <b>February 14th</b> from <b>19:00</b> onwards. We'll provide beer, snacks and entertainment.</p>
+                <p>Find us at <b>Torenallee 32-06</b> in <b>Eindhoven</b>. We're located in the Apparatenfabriek, 5th floor. </p>
+                <p>RSVP on the right so we can take your attendance into account.</p>
+                <p>We hope to see you soon!</p>
                 <div className="flex gap-4">
                     <p>
                         Lei<br />
@@ -57,9 +57,9 @@ export default function RSVP({ response }: RSVPProps) {
                 </div>
                 <Accordion type="multiple">
                     <AccordionItem value="getting-there">
-                        <AccordionTrigger>What's the best way to get there?</AccordionTrigger>
+                        <AccordionTrigger>How can we get there?</AccordionTrigger>
                         <AccordionContent>
-                            <p className="mb-4">We're located in Apparatenfabriek, on Strijp-S in Eindhoven (on Google, find <a  className="underline" target="_blank" href="https://maps.app.goo.gl/L9GWVbch6ki72vY38">Seats2Meet Eindhoven Strijp-S</a>). The front door is closed at night. <a href="tel:+31642030098" className="underline">Call Lei</a> to get someone to open the door for you.</p>
+                            <p className="mb-4">We're located in Apparatenfabriek,  Strijp-S, Eindhoven (on Google Maps, find <a  className="underline" target="_blank" href="https://maps.app.goo.gl/L9GWVbch6ki72vY38">Seats2Meet Eindhoven Strijp-S</a>). The front door is closed at night. <a href="tel:+31642030098" className="underline">Call Lei</a> to get someone to open the door for you. </p>
                             <h3 className="font-semibold mb-2">By car</h3>
                             <p className="mb-4">Find <a className="underline" href="https://maps.app.goo.gl/WKsRFCsNTNgp7LoY8" target="_blank">"Parkeergarage Om de Hoek"</a> and navigate there. Please note that parking is paid. When exiting the garage, move towards the bus stop. Walk between the two left-most buildings, and find the entrance labeled "Apparatenfabriek".</p>
                             <h3 className="font-semibold mb-2">By public transport</h3>
@@ -67,8 +67,8 @@ export default function RSVP({ response }: RSVPProps) {
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="gifts">
-                        <AccordionTrigger>What can we get you?</AccordionTrigger>
-                        <AccordionContent>Plants! 🪴 We'd love some plants to decorate the office ! If you're able to, we encourage you to pool together for bigger plants.</AccordionContent>
+                        <AccordionTrigger>Is there anything we can get you?</AccordionTrigger>
+                        <AccordionContent>Plants! 🪴 We'd love some plants to decorate the office! If you're able to, we encourage you to pool together for bigger plants.</AccordionContent>
                     </AccordionItem>
                 </Accordion>
             </div>
