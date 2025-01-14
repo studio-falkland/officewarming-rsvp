@@ -30,7 +30,7 @@ export default function RSVP({ response }: RSVPProps) {
                 <p>We've been working on a place where we can collaborate, work and most importantly have some fun. We'd love to show you what we've made.</p>
                 <p>We're warmly welcoming you to join our studiowarming on <b>February 14th</b> from <b>19:00</b> onwards. We'll provide beer, snacks and entertainment.</p>
                 <p>Find us at <b>Torenallee 32-06</b> in <b>Eindhoven</b>. We're located in the Apparatenfabriek, 5th floor. </p>
-                <p>RSVP on the right so we can take your attendance into account.</p>
+                <p>RSVP on the <span className="md:inline hidden">right</span><span className="inline md:hidden">bottom</span> so we can take your attendance into account.</p>
                 <p>We hope to see you soon!</p>
                 <div className="flex gap-4">
                     <p>
