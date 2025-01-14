@@ -77,7 +77,7 @@ export default function RSVP({ response }: RSVPProps) {
                 </div>
             </div>
             <div className="h-full p-8 flex items-center justify-center relative">
-                <img src="/office-bg.jpg" className="absolute inset-0 -z-0 object-cover w-full h-full bg-blue-50 pointer-events-none" />
+                <img src="/office-bg.webp" className="absolute inset-0 -z-0 object-cover w-full h-full bg-blue-50 pointer-events-none" />
                 <div className="max-w-[480px] z-10">
                     <Form {...form}>
                         {showPreviousResponse ? (

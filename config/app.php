@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Officewarming RSVP'),
+    'name' => env('APP_NAME', 'Studiowarming RSVP'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://officewarming.falkland.studio'),
+    'url' => env('APP_URL', 'https://warming.falkland.studio'),
 
     /*
     |--------------------------------------------------------------------------
