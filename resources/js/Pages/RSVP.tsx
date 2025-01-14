@@ -49,7 +49,7 @@ export default function RSVP({ response }: RSVPProps) {
                             Ilse Pouwels
                         </a>
                     </p><p>
-                        Jésus<br />
+                        Jesus<br />
                         <a className="underline opacity-60 text-sm" href="https://ecoforma.design" target="_blank">
                             Ecoforma
                         </a>
