@@ -55,6 +55,9 @@ export default function RSVP({ response }: RSVPProps) {
                         </a>
                     </p>
                 </div>
+                <Button asChild variant="outline" className="mt-2">
+                    <a href="/Studiowarming.ics" target="_blank"><span className="mr-2">📅</span>Add to calendar</a>
+                </Button>
                 <Accordion type="multiple">
                     <AccordionItem value="getting-there">
                         <AccordionTrigger>How can we get there?</AccordionTrigger>
