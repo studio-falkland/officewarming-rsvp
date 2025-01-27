@@ -32,7 +32,7 @@ export default function RSVP({ response }: RSVPProps) {
                 <p>Find us at <b>Torenallee 32-06</b> in <b>Eindhoven</b>. We're located in the Apparatenfabriek, 5th floor. </p>
                 <p>RSVP on the <span className="md:inline hidden">right</span><span className="inline md:hidden">bottom</span> so we can take your attendance into account.</p>
                 <p>We hope to see you soon!</p>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap">
                     <p>
                         Lei<br />
                         <a className="underline opacity-60 text-sm" href="https://falkland.studio" target="_blank">
@@ -52,6 +52,11 @@ export default function RSVP({ response }: RSVPProps) {
                         Jesus<br />
                         <a className="underline opacity-60 text-sm" href="https://ecoforma.design" target="_blank">
                             Ecoforma
+                        </a>
+                    </p><p>
+                        Frank<br />
+                        <a className="underline opacity-60 text-sm" href="https://instigate.nl" target="_blank">
+                            Instigate
                         </a>
                     </p>
                 </div>
